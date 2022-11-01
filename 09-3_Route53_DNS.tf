@@ -7,7 +7,7 @@
 resource "aws_route53_zone" "domain_01" {
   name = "example.com"
 }
-*/
+
 
 # root domain (www O)
 resource "aws_route53_record" "www_zone" {
@@ -33,3 +33,4 @@ resource "aws_route53_record" "A_zone" {
     evaluate_target_health = true
   }
 }
+*/

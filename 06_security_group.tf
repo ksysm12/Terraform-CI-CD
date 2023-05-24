@@ -27,21 +27,21 @@ resource "aws_security_group" "Bastion" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["183.98.156.109/32"]
+    cidr_blocks = ["0.0.0.0/0"]
   }
   ingress {
     description = "${var.customer} to EC2 SSH"
     from_port   = 2201
     to_port     = 2204
     protocol    = "tcp"
-    cidr_blocks = ["183.98.156.109/32"]
+    cidr_blocks = ["0.0.0.0/0"]
   }
   ingress {
     description = "${var.customer} to Bastion RDP"
     from_port   = 3389
     to_port     = 3389
     protocol    = "tcp"
-    cidr_blocks = ["183.98.156.109/32"]
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
   egress {
